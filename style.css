@@ -23,6 +23,18 @@ body{
     padding: 0 3rem;
 }
 
+body::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 50%;
+   height: 60vh;
+   z-index: -1;
+   border-bottom-left-radius: 7rem;
+   background-color: var(--Light-Grayish-Blue);
+}
+
 img{
     max-width: 100%;
     display: block;
