@@ -1,0 +1,147 @@
+:root{
+--Red: hsl(0, 100%, 68%);
+--Very-Dark-Blue: hsl(230, 29%, 20%);
+--Dark-Grayish-Blue: hsl(230, 11%, 40%);
+--Grayish-Blue: hsl(231, 7%, 65%);
+--Light-Grayish-Blue: hsl(207, 33%, 95%);
+--font-400: 400;
+--font-700: 700;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+         font-size: 62.5%;
+}
+
+body{
+    font-size: 1.8rem;
+    padding: 0 3rem;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 110rem;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 5rem 0;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.header__logo_wrapper{
+    margin-right: auto;
+}
+
+.header__nav__list{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.header__nav__link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    font-weight: var(--font-700);
+    display: inline-block;
+    padding: 0 2rem;
+}
+
+.header__nav__link::after{
+    content: '';
+    width: 0%;
+    height: 0.1rem;
+    display: block;
+    background-color: var(--Very-Dark-Blue);
+    transition: 0.3s;
+}
+
+.header__nav__link__login::after{
+    background-color: var(--Grayish-Blue);
+}
+
+.header__nav__link__login{
+    color: var(--Grayish-Blue);
+    padding-right: 0;
+}
+
+.header__nav__links_divider{
+     width: 0.6rem;
+     height: 0.6rem;
+     background-color: var(--Grayish-Blue);
+     border-radius: 50%;
+     margin: 0 3rem;
+}
+
+.header__nav__link:hover::after{
+    width: 100%;
+}
+
+.header__nav__link__login:hover::after{
+    width: 100%;
+}
+
+.header__hamburger__img{
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px){
+
+    .header__hamburger__img{
+        display:  block;
+    }
+
+    .header{
+        position: relative;
+    }
+
+    .header__nav{
+     display: none;   
+     position: absolute;
+     background-color: white;
+     padding: 2.5rem 4rem;
+     width: 100%;
+     bottom: -23rem;
+     box-shadow: -0.4rem 0.7rem 2.8rem 0.1rem rgba(0,0,0,0.36);
+    }
+
+.header__nav__display{
+    display: block;
+}
+
+    .header__nav__list{
+        flex-direction: column;
+    }
+.header__nav__link{
+    padding: 0;
+}
+
+.header__nav__links_divider{
+    width: 100%;
+    height: 0.15rem;
+    border-radius: 0;
+}
+
+.header__nav__list li:not(:last-child){
+    margin-bottom: 2.5rem;
+}
+
+
+
+}
+
