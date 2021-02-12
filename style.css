@@ -23,6 +23,7 @@ body{
     font-size: 1.8rem;
     padding: 0 3rem;
     overflow-x: hidden;
+    position: relative;
 }
 
 body::before{
@@ -31,7 +32,7 @@ body::before{
    top: 0;
    right: 0;
    width: 50%;
-   height: 60vh;
+   height: 50vh;
    z-index: -1;
    border-bottom-left-radius: 7rem;
    background-color: var(--Light-Grayish-Blue);
@@ -194,7 +195,7 @@ body::before{
     background-color: rgba(255, 92, 92 , 0.8);
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
 
 
     /* header for mobile */
@@ -238,15 +239,35 @@ body::before{
 }
 /* end of header for mobile */
 
+.hero{
+    flex-direction: column;
+}
 
+.hero__text{
+    order: 2;
+    margin-top: 5rem;
+    padding-bottom: 5rem;
+}
+
+.hero__text, .hero__image_wrapper{
+    width: 100%;
+}
+.hero__image_wrapper{
+    padding-top: 2rem;
+}
+
+.hero__image_wrapper img{
+    width: 150vw;
+}
+.hero__desc{
+    width: 100%;
+}
 }
 
 @media screen and (max-width: 900px){
     .hero__wrapper{
         width: 100%;
     }
-    .hero__text {
-        margin-top: 0;
-    }
 }
+
 
