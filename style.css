@@ -16,11 +16,13 @@
 
 html{
          font-size: 62.5%;
+         overflow-x: hidden;
 }
 
 body{
     font-size: 1.8rem;
     padding: 0 3rem;
+    overflow-x: hidden;
 }
 
 body::before{
@@ -35,11 +37,6 @@ body::before{
    background-color: var(--Light-Grayish-Blue);
 }
 
-img{
-    max-width: 100%;
-    display: block;
-}
-
 .container{
     max-width: 110rem;
     width: 100%;
@@ -47,10 +44,13 @@ img{
     margin: 0 auto;
 }
 
+/* start of header */
+
 .header{
     display: flex;
     align-items: center;
-    padding: 5rem 0;
+    /* padding: 5rem 0; */
+    height: 20vh;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
@@ -112,8 +112,92 @@ img{
     cursor: pointer;
 }
 
+/* End od header */
+
+
+.hero{
+    display: flex;
+    height: 80vh;
+    align-items: center;
+}
+
+.hero__wrapper{
+    width: 90%;
+}
+
+.hero__text{
+   width: 50%;
+   margin-top: -6rem;
+}
+
+.hero__image_wrapper{
+   width: 50%;
+}
+
+.btn{
+    font-family: 'Barlow Condensed', sans-serif;
+    cursor: pointer;
+}
+
+.hero__text__com{
+    letter-spacing: 0.4rem;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.hero__label__btn{
+    padding: 0 0.8rem;
+}
+.hero__hightlight__btn{
+    background-color: var(--Very-Dark-Blue);
+    border-radius: 1.5rem;
+    color: white;
+    padding: 0 0.8rem;
+}
+
+.hero__heading{
+    font-size: 5.5rem;
+    font-weight: var(--font-700);
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--Very-Dark-Blue);
+    margin: 1rem 0;
+}
+.hero__desc{
+    font-family: 'Barlow', sans-serif;
+    color: var(--Dark-Grayish-Blue);
+    margin: 2.5rem 0;
+    width: 60%;
+}
+
+.hero__text_preview{
+    font-size: 1.3rem;
+    margin-left: 1.5rem;
+}
+
+.cta__btn{
+    background-color: var(--Red);
+    border: none;
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: white;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    margin-top: 4rem;
+}
+
+.cta__btn:hover{
+    background-color: rgba(255, 92, 92 , 0.8);
+}
+
 @media screen and (max-width: 600px){
 
+
+    /* header for mobile */
     .header__hamburger__img{
         display:  block;
     }
@@ -152,8 +236,17 @@ img{
 .header__nav__list li:not(:last-child){
     margin-bottom: 2.5rem;
 }
+/* end of header for mobile */
 
 
+}
 
+@media screen and (max-width: 900px){
+    .hero__wrapper{
+        width: 100%;
+    }
+    .hero__text {
+        margin-top: 0;
+    }
 }
 
